@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDD923"
+        android:gravity="center"
+        app:layout_constraintWidth_max="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Username..."
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/black"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+
+                android:background="@drawable/edittextbackground"
+                android:hint="E-mail..."
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/black"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Password..."
+
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/black"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/repassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Confirm Password..."
+                android:paddingLeft="20dp"
+                android:textColorHint="@color/black"
+                android:textSize="25dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/repassword">
+
+                <CheckBox
+                    android:id="@+id/checkboxUserAgreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree to the " />
+
+                <TextView
+                    android:id="@+id/termsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Terms and Conditions."
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:clickable="true"
+                    android:textStyle="italic" />
+                <!--        android:onClick="termsandagreementpopup" -->
+                <!--        make the rules of it in this method.-->
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/roundstyle"
+                android:textColor="@color/white"
+                android:text="Create user"
+                android:textSize="25dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/white"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/black"
+                android:text="Already have an account"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

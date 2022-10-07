@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDD923"
+        android:gravity="center"
+        app:layout_constraintWidth_max="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/textViewLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:text="LOGIN"
+                android:textColor="@color/black"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:background="@drawable/edittextbackground"
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="E-mail..."
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="Password..."
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:id="@+id/recoverPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="RECOVER PASSWORD"
+                    android:textColor="#5A5757"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+                <!-- android:onClick="Recover password." -->
+                <!-- make the rules of it in this method.-->
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_height="60dp"
+                android:background="@drawable/roundstyle"
+                android:layout_marginBottom="40dp"
+                android:text="Login"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/createUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CREATE USER"
+                android:textAlignment="center"
+                android:paddingVertical="10dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#5A5757"
+                android:clickable="true"
+                android:layout_marginBottom="20dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
