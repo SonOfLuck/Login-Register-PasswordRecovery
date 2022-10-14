@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LoginAndRegisterMONGODB</string>
+    <string name="termsconditions"><u>Terms and Conditions.</u></string>
 </resources>

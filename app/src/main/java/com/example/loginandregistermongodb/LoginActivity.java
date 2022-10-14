@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
-    private AppCompatButton login, loginFacebook;
+    private AppCompatButton login;
     private TextView createUser, recoverPassword;
     MongoDBConnection mongoDBapi;
     MyInternetConnection internetConnection;
@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        LoginActivity.this.getSupportActionBar().hide();
         mongoDBapi = new MongoDBConnection();
         internetConnection = new MyInternetConnection();
         createUser = findViewById(R.id.createUser);

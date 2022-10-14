@@ -23,64 +23,94 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp"
+            android:paddingHorizontal="10dp"
             >
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center_horizontal"
                 android:text="Sign Up"
                 android:textColor="@color/black"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/username"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittextbackground"
-                android:hint="Username..."
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/black"
-                android:textSize="25dp" />
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray_900"
+                app:passwordToggleEnabled="false">
 
-            <EditText
-                android:id="@+id/email"
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="Username..."
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray_900"
+                app:passwordToggleEnabled="false">
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="E-mail..."
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                android:background="@drawable/edittextbackground"
-                android:hint="E-mail..."
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/black"
-                android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/password"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittextbackground"
-                android:hint="Password..."
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray_900"
+                app:passwordToggleEnabled="true">
 
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/black"
-                android:textSize="25dp" />
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="Password..."
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/repassword"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/edittextbackground"
-                android:hint="Confirm Password..."
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/black"
-                android:textSize="25dp" />
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray_900"
+                app:passwordToggleEnabled="true">
+                <EditText
+                    android:id="@+id/repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittextbackground"
+                    android:hint="Confirm Password..."
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -95,6 +125,7 @@
                 <CheckBox
                     android:id="@+id/checkboxUserAgreement"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="I agree to the " />
 
@@ -103,13 +134,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="Terms and Conditions."
+                    android:text="@string/termsconditions"
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:clickable="true"
-                    android:textStyle="italic" />
-                <!--        android:onClick="termsandagreementpopup" -->
-                <!--        make the rules of it in this method.-->
+                    android:textStyle="italic"
+                    />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
@@ -121,7 +151,7 @@
                 android:background="@drawable/roundstyle"
                 android:textColor="@color/white"
                 android:text="Create user"
-                android:textSize="25dp" />
+                android:textSize="24dp" />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/signin"
                 android:layout_width="match_parent"
@@ -130,6 +160,7 @@
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/black"
                 android:text="Already have an account"
+                android:layout_marginBottom="10dp"
                 android:textSize="15dp" />
 
 

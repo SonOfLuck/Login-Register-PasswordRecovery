@@ -28,6 +28,7 @@ public class signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
+        signup.this.getSupportActionBar().hide();
         mongoDBapi = new MongoDBConnection();
         internetConnection = new MyInternetConnection();
 

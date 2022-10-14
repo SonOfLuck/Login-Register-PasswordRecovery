@@ -24,6 +24,7 @@ public class PasswordRecovery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.passwordrecovery);
+        PasswordRecovery.this.getSupportActionBar().hide();
         mongoDBapi = new MongoDBConnection();
         internetConnection = new MyInternetConnection();
         email = findViewById(R.id.email);
@@ -53,7 +54,7 @@ public class PasswordRecovery extends AppCompatActivity {
                         }
                         @Override
                         public void onErrorResponse(String result) {
-                            Log.d("ERROR", result);
+                            Log.d("ERROR", "message " + result);
                         }
                     }, e_mail, PasswordRecovery.this);
 
